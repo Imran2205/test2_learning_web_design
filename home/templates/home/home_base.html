@@ -1,0 +1,395 @@
+
+
+{% load static %}
+    <!DOCTYPE html>
+<html lang="en-GB" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <!-- <meta name="viewport" content="width=575"> -->
+        <meta name="format-detection" content="telephone=no">
+        <title>my home &amp; Development Company.</title>
+        <title>my home &amp; Development Company.</title>
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v11.0 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="#"/>
+<link rel="canonical" href="#" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="#" />
+<meta property="og:title" content="#" />
+<meta property="og:description" content="#" />
+<meta property="og:url" content="#" />
+<meta property="og:site_name" content="Fireart Studio" />
+<meta property="og:image" content="#" />
+<meta property="og:image:secure_url" content=# />
+<meta property="og:image:width" content="1440" />
+<meta property="og:image:height" content="900" />
+<meta name="twitter:card" content="#" />
+<meta name="twitter:description" content="#" />
+<meta name="twitter:title" content="#" />
+<meta name="twitter:site" content="#" />
+<meta name="twitter:image" content="#" />
+<meta name="twitter:creator" content="#" />
+<meta name="msvalidate.01" content="#" />
+<meta name="yandex-verification" content="bc0aed2d5cef31ab" />
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel='dns-prefetch' href='#' />
+<link rel='stylesheet' id='reset-css'  href="{% static 'home/reset_min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css'  href="{% static 'home/animate_min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css'  href="{% static 'home/fontello_min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href="{% static 'home/style_min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='media-style-css'  href="{% static 'home/media_min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='custom-css'  href="{% static 'home/custom_min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href="{% static 'home/style_min2.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='crp-style-rounded-thumbs-css'  href="{% static 'home/default_style_min.css' %}" type='text/css' media='all' />
+<style id='crp-style-rounded-thumbs-inline-css' type='text/css'>
+
+.crp_related a {
+  width: 150px;
+  height: 150px;
+  text-decoration: none;
+}
+.crp_related img {
+  max-width: 150px;
+  margin: auto;
+}
+.crp_related .crp_title {
+  width: 100%;
+}
+
+</style>
+<style type="text/css">
+	body{
+		background-color: #fff;
+        color: #000;
+	}
+</style>
+
+  <link rel="icon" href=#>
+  <link rel="shortcut icon" href=# type="image/x-icon">        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-35603005-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+
+
+    </head>
+
+<body class="  scrollie-consumer" class="home page-template page-template-fontpage page-template-fontpage-php page page-id-6">
+    <div class="container-fluid main fixed-header" id="header">
+        <div class="container">
+            <div class="row-first f-c">
+                <div class="col first">
+                    <!--<a href="{% static 'img/logo_css.png' %}" class="logo wow fadeInUp" data-wow-delay="1s"></a>-->
+                </div>
+
+
+                <div class="col second">
+                    <button class="btn-close"><i class="icon-close"></i></button>
+
+<ul id="menu-header-menu" class="menu">
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a href="{% url 'home-home' %}">Home</a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a href="#">Sites</a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a href="#">Shop</a></li>
+<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a href="{% url 'home-blog' %}">Blog</a></li>
+{% block post %}{% endblock %}
+
+</ul>
+                    <!--<ul class="menu">
+                        <li class="custom-wow animation-fill-forwards fadeInRotateUpLittle"><a href="{% url 'home-home' %}">Home</a></li>
+                        <li class="custom-wow animation-fill-forwards fadeInRotateUpLittle"><a href="#">Sites</a></li>
+                        <li class="custom-wow animation-fill-forwards fadeInRotateUpLittle"><a href="#">Shop</a></li>
+                        <li class="custom-wow animation-fill-forwards fadeInRotateUpLittle"><a href="{% url 'home-blog' %}">Blog</a></li>
+                    </ul>-->
+					{% if user.is_authenticated %}
+					<a href="{% url 'logout' %}">
+                        <button class="btn-hire-us first wow fadeInUp" data-wow-delay="1s">
+                            <span>Logout</span>
+                            <i class="icon-circles"><span></span></i>
+                        </button>
+                    </a>
+					{% else %}
+					<a href="{% url 'login' %}">
+                        <button class="btn-hire-us first wow fadeInUp" data-wow-delay="1s">
+                            <span>Login</span>
+                            <i class="icon-circles"><span></span></i>
+                        </button>
+                    </a>
+					<a href="{% url 'register' %}">
+                        <button class="btn-hire-us first wow fadeInUp" data-wow-delay="1s">
+                            <span>Register</span>
+                            <i class="icon-circles"><span></span></i>
+                        </button>
+                    </a>
+					{% endif %}
+
+                </div>
+                <div class="col third">
+                    <button class="btn-hire-us second">
+                        <span></span>
+                        <i class="icon-circles"><span></span></i>
+                    </button>
+                    <div class="btn-hamburger">
+                        <i class="icon-hamburger">
+                            <span></span>
+                        </i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% block content %}{% endblock %}
+
+
+<div class="container-fluid s-our-clients c1 primary-block  scrollie-consumer" data-midnight="static">
+	<div class="container">
+		<div class="section-title t3 animate-title">Our Clients</div>
+		<div class="section-subtitle st2 anitame-subtitle">We believe brands are the cultural connection between companies and their customers.</div>
+		<div class="item-area">
+
+							<div class="item-wrap">
+					<div class="item">
+						<div class="item-img img-wrap contain wow fadeInRotateUp" data-wow-delay="100ms" data-wow-offset="50">
+							<img src=# alt="#">
+						</div>
+					</div>
+				</div>
+							<div class="item-wrap">
+					<div class="item">
+						<div class="item-img img-wrap contain wow fadeInRotateUp" data-wow-delay="200ms" data-wow-offset="50">
+							<img src=# alt="#">
+						</div>
+					</div>
+				</div>
+							<div class="item-wrap">
+					<div class="item">
+						<div class="item-img img-wrap contain wow fadeInRotateUp" data-wow-delay="300ms" data-wow-offset="50">
+							<img src=# alt="#">
+						</div>
+					</div>
+				</div>
+							<div class="item-wrap">
+					<div class="item">
+						<div class="item-img img-wrap contain wow fadeInRotateUp" data-wow-delay="400ms" data-wow-offset="50">
+							<img src="#" alt="#">
+						</div>
+					</div>
+				</div>
+							<div class="item-wrap">
+					<div class="item">
+						<div class="item-img img-wrap contain wow fadeInRotateUp" data-wow-delay="500ms" data-wow-offset="50">
+							<img src=# alt="#">
+						</div>
+					</div>
+				</div>
+							<div class="item-wrap">
+					<div class="item">
+						<div class="item-img img-wrap contain wow fadeInRotateUp" data-wow-delay="600ms" data-wow-offset="50">
+							<img src=# alt="#">
+						</div>
+					</div>
+				</div>
+
+
+		</div>
+	</div>
+</div>
+
+
+
+<div class="container-fluid c1 s-collection case primary-block  scrollie-consumer" data-midnight="static">
+	<div class="container">
+		<div class="section-title t2 animate-title">Case Studies</div>
+		<div class="item-area f-c">
+								<div class="item-wrap">
+				<div class="item">
+					<a href=# class="item-img img-wrap">
+
+						<img src=# alt="#"">
+						<div class="img-hider animation-fill-forwards scrollie-consumer"></div>
+					</a>
+					<div class="item-category-date">
+						Development, Product Design
+					</div>
+					<div class="item-title"><a href=#>Narrative Illustrations and User Avatars for Google Play</a></div>
+				</div>
+			</div>
+								<div class="item-wrap">
+				<div class="item">
+					<a href=# class="item-img img-wrap">
+
+						<img src=# alt="#"">
+						<div class="img-hider animation-fill-forwards scrollie-consumer"></div>
+					</a>
+					<div class="item-category-date">
+						Development, Product Design
+					</div>
+					<div class="item-title"><a href=#>Rocco the Rhino - A Memorable Character Concept</a></div>
+				</div>
+			</div>
+					</div>
+	</div>
+</div>
+
+
+
+<div class="container-fluid c1 s-make-together" data-midnight="static">
+	<div class="container">
+		<div class="section-title t5 animate-title">Let’s make something amazing together</div>
+		<div class="section-link"><a href="#">client@something.studio</a></div>
+	</div>
+</div>	    <div class="container-fluid" id="footer">
+        <div class="container">
+            <div class="row-first f-c">
+                <div class="col first">
+                    <a href="#" class="logo"></a>
+                </div>
+                <div class="col second">
+                    <div class="col-title">Visit us <i class="icon-arrow-down-2"></i></div>
+                    <div class="address col-spoiler">Bangladesh<br>Dhaka, 1216 <br>Mirpur-12
+<br><a href="#">client@something.studio</a></div>
+                </div>
+                <div class="col third">
+                    <div class="col-title">Call us <i class="icon-arrow-down-2"></i></div>
+                    <div class="phones col-spoiler">Bangladesh <br>+880 *********** <br><br>2nd branch <br>************** <br><br>3rd branch <br>********************</div>
+                </div>
+                <div class="col fourth">
+                    <div class="col-title">Services <i class="icon-arrow-down-2"></i></div>
+                    <ul id="menu-footer-services" class="menu col-spoiler"><li id="menu-item-218" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-218"><a href="/services/product-design/">Product Design</a></li>
+<li id="menu-item-219" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-219"><a href="/services/development/">Development</a></li>
+<li id="menu-item-221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-221"><a href="/services/outstaffing/">Outstaffing</a></li>
+<li id="menu-item-222" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-222"><a href="/services/logo-branding/">Brand Identity</a></li>
+<li id="menu-item-223" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-223"><a href="/services/motion-design/">Motion Design</a></li>
+</ul>                </div>
+                <div class="col seventh"></div>
+                <div class="col fifth">
+                    <div class="col-title">Company <i class="icon-arrow-down-2"></i></div>
+                    <ul id="menu-footer-company" class="menu col-spoiler"><li id="menu-item-224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-224"><a href="/cases/">Cases</a></li>
+<li id="menu-item-226" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-226"><a href="/services/">Services</a></li>
+<li id="menu-item-227" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-227"><a href="/blog/">Blog</a></li>
+<li id="menu-item-228" class="careers-buble menu-item menu-item-type-custom menu-item-object-custom menu-item-228"><a href="/careers/">Careers</a></li>
+<li id="menu-item-229" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-229"><a href="/scholarship/">Scholarship</a></li>
+<li id="menu-item-230" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-230"><a href="/calc/">Mobile app calc</a></li>
+</ul>                </div>
+                <div class="col sixth">
+                    <div class="col-title">Follow us <i class="icon-arrow-down-2"></i></div>
+                    <ul id="menu-footer-follow-us" class="menu col-spoiler"><li id="menu-item-231" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-231"><a target="_blank" href="https://dribbble.com/Fireart-d">Dribbble</a></li>
+<li id="menu-item-232" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-232"><a target="_blank" href=#>Behance</a></li>
+<li id="menu-item-233" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-233"><a target="_blank" href=#>Instagram</a></li>
+<li id="menu-item-234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-234"><a target="_blank" href=#>Facebook</a></li>
+<li id="menu-item-235" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-235"><a target="_blank" href=#>Twitter</a></li>
+</ul>                </div>
+            </div>
+            <div class="row-second">
+                <ul class="menu">
+                    <li class="copyright">Copyright © 2019 something studio. All rights reserved.</li>
+                    <li><a href="/cookie-policy/">Cookie Policy</a></li>
+                    <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="s-footer-height"></div>
+<div class="s-progress-reading"></div>
+<div class="s-progress-loading"><div><span>0%</span></div></div>
+<div class="body-hider"></div>
+<div class="s-transition-pages">
+    <div class="item first"></div>
+    <div class="item second"></div>
+</div>
+
+<script src="{% static 'home/jquery_min.js' %}"></script>
+
+<script src="{% static 'home/midnight.jquery.min.js' %}"></script>
+<script src="{% static 'home/jquery_ui_min.js' %}"></script>
+<script src="{% static 'home/jquery_scrollie_min.js' %}"></script>
+<script src="{% static 'home/jquery_hover3d_min.js' %}"></script>
+<script src="{% static 'home/wow_min.js' %}"></script>
+
+<script src="{% static 'home/script_min.js' %}"></script>
+
+<style>
+    #header>.static .row-first>.col.first .logo,
+    #header > .static .btn-hire-us {
+        visibility: visible !important;
+    }
+    #header .logo {
+        display: block;
+        margin-left: 4px;
+        height: 41px;
+        background-repeat: no-repeat;
+        background-image: url(https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/02/fireart_logo_md_white.svg);
+        background-size: contain;
+        /* padding-left: 41px; */
+        padding-left: 275px;
+        /* background-size: 275px 41px; */
+        background-size: initial;
+        transition-duration: 0s;
+        animation-delay: 1.6s;
+    }
+    #header .static .logo {
+        background-image: url(https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/02/fireart_sign_red-1.svg);
+        background-size: initial;
+    }
+    #header.white .logo {
+        background-image: url(https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/02/header_logo_white_lg.svg);
+    }
+
+    @media (max-width: 1440px){
+        #header .logo {
+            /* margin-left: 2px;
+            height: 41px; */
+            /* background-image: url(https://fireart.studio/wp-content/themes/fireart/header_logo_black.svg); */
+            /* background-size:contain; */
+            /* padding-left: 156px; */
+        }
+        #header .midnightHeader.static .logo {
+            margin-bottom: 0;
+        }
+        #header.white .logo {
+            /* background-image: url(https://fireart.studio/wp-content/themes/fireart/header_logo_white.svg); */
+        }
+    }
+    #header.header-bottom-border .logo.logo-only-pic {
+        padding-left: 48px !important;
+    }
+
+
+    /*  */
+
+    .s-form .logo{
+        background-repeat: no-repeat;
+        height: 42px;
+        background-size: 54px 42px;
+        padding-left: 54px;
+    }
+
+        @media screen and (max-width: 1024px){
+        #header .col.first .logo {
+            height: 41px;
+            background-repeat: no-repeat;
+            background-image: url(https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/02/fireart_sign_red-1.svg) !important;
+            background-size: 53px 41px;
+            padding-left: 53px;
+        }
+        #header .midnightHeader.static .logo {
+    margin-bottom: 0px;
+}
+    }
+
+
+
+
+</style>
+
+</body>
+</html>

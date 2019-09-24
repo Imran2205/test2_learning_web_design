@@ -1,0 +1,238 @@
+{% extends "home/home_base.html" %}
+{% block content %}
+<div class="container-fluid s-placeholder type-blog-post">
+	<div class="placeholder-hider"></div>
+	<div class="section-bg img-wrap">
+		<img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/08/franck-v-jIBMSMs4_kA-unsplash.jpg" alt="">
+	</div>
+	<div class="container">
+		<div class="row-first">
+			<div class="col">
+				<div class="content-narrow">
+					<h1 class="section-title t1 animate-placeholder-title">{{ object.title }}</h1>
+					<ul class="item-info animate-placeholder-subtitle">
+						<li>
+                            <ul class="item-rating">
+                                <li data-star-group="4661" data-star="1" class="post-rating-image star-full-white"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot.svg" alt></li><li data-star-group="4661" data-star="2" class="post-rating-image star-full-white"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot.svg" alt></li><li data-star-group="4661" data-star="3" class="post-rating-image star-full-white"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot.svg" alt></li><li data-star-group="4661" data-star="4" class="post-rating-image star-full-white"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot.svg" alt></li><li data-star-group="4661" data-star="5" class="post-rating-image star-full-white"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot.svg" alt></li>                            </ul>
+                        </li>
+						<li><div class="item-cat">{{ object.author }}</div></li>
+						<li><div class="item-date">{{ object.date_posted|date:"F d, Y" }}</div></li>
+						<li><div class="item-time">7 min read</div></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="s-blog-post">
+	<div class="container-fluid s-text c1 primary-block" data-midnight="static">
+		<div class="container">
+			<div class="s-fixed-share">
+				<ul>
+					<li>
+					<script>
+						var host = document.URL;
+						var facebook_loc = 'https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u='+host+'&display=popup&ref=plugin&src=share_button';
+						var twitter_loc = 'https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=&tw_p=tweetbutton&url='+ host;
+					</script>
+					<a href="" class="facebook-href" target="_blank"><i class="icon-facebook-2"></i></a></li>
+					<li><a href="" class="twitter-share-button" target="_blank" data-show-count="false"><i class="icon-twitter-2"></i></a></li>
+
+				</ul>
+			</div>
+			<div class="content-narrow">
+				<div class="section-content">
+									<p>&nbsp;</p>
+<p>&nbsp;</p>
+					{% if object.head1 %}
+<h2><span style="font-weight: 400;">{{ object.head1 }}</span></h2>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.content1 %}
+<p><span style="font-weight: 400;">{{ object.content1 }}</span></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.imagesall_set.image %}
+<p><img class="alignnone size-full wp-image-4664" src="{{ object.imagesall_set.image.url }}"></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.head2 %}
+<h2><span style="font-weight: 400;">{{ object.head2 }}</span></h2>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.content2 %}
+<p><span style="font-weight: 400;">{{ object.content2 }}</span></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.file2 %}
+<p><img class="alignnone size-full wp-image-4664" src="{{ object.file2.url }}"></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.head3 %}
+<h2><span style="font-weight: 400;">{{ object.head3 }}</span></h2>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.content3 %}
+<p><span style="font-weight: 400;">{{ object.content3 }}</span></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.file3 %}
+<p><img class="alignnone size-full wp-image-4664" src="{{ object.file3.url }}"></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.head4 %}
+<h2><span style="font-weight: 400;">{{ object.head4 }}</span></h2>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.content4 %}
+<p><span style="font-weight: 400;">{{ object.content4 }}</span></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.file4 %}
+<p><img class="alignnone size-full wp-image-4664" src="{{ object.file4.url }}"></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.head5 %}
+<h2><span style="font-weight: 400;">{{ object.head5 }}</span></h2>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.content5 %}
+<p><span style="font-weight: 400;">{{ object.content5 }}</span></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.file5 %}
+<p><img class="alignnone size-full wp-image-4664" src="{{ object.file5.url }}"></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.head6 %}
+<h2><span style="font-weight: 400;">{{ object.head6 }}</span></h2>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.content6 %}
+<p><span style="font-weight: 400;">{{ object.content6 }}</span></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.file6 %}
+<p><img class="alignnone size-full wp-image-4664" src="{{ object.file6.url }}"></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.head7 %}
+<h2><span style="font-weight: 400;">{{ object.head7 }}</span></h2>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.content7 %}
+<p><span style="font-weight: 400;">{{ object.content7 }}</span></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.file7 %}
+<p><img class="alignnone size-full wp-image-4664" src="{{ object.file7.url }}"></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.head8 %}
+<h2><span style="font-weight: 400;">{{ object.head8 }}</span></h2>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.content8 %}
+<p><span style="font-weight: 400;">{{ object.content8 }}</span></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.file8 %}
+<p><img class="alignnone size-full wp-image-4664" src="{{ object.file8.url }}"></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.head9 %}
+<h2><span style="font-weight: 400;">{{ object.head9 }}</span></h2>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.content9 %}
+<p><span style="font-weight: 400;">{{ object.content9 }}</span></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.file9 %}
+<p><img class="alignnone size-full wp-image-4664" src="{{ object.file9.url }}"></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.head10 %}
+<h2><span style="font-weight: 400;">{{ object.head10 }}</span></h2>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.content10 %}
+<p><span style="font-weight: 400;">{{ object.content10 }}</span></p>
+					{% endif %}
+<p>&nbsp;</p>
+					{% if object.file10 %}
+<p><img class="alignnone size-full wp-image-4664" src="{{ object.file10.url }}"></p>
+					{% endif %}
+
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="container-fluid s-placeholder type-blog-post-low" data-midnight="static">
+		<div class="section-bg img-wrap">
+			<img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2018/11/2312.jpg" alt="">
+		</div>
+		<div class="container">
+			<div class="row-first">
+				<div class="col">
+					<div class="content-narrow">
+
+						<div class="section-status"><div class="btn-status">It’s worth to read</div></div>
+						<a href="https://fireart.studio/web-design-for-kids-7-tips-and-best-practices/" style="display: block;" class="section-title t3 animate-title">Web Design for Kids: 7 Tips and Best Practices</a>
+						<ul class="item-info wow fadeIn" data-wow-offset="100">
+							<li>
+                                <ul class="item-rating">
+                                    <li data-star-group="2312" data-star="1" class="post-rating-image star-full-white"><img src="#" alt></li><li data-star-group="2312" data-star="2" class="post-rating-image star-full-white"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot.svg" alt></li><li data-star-group="2312" data-star="3" class="post-rating-image star-full-white"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot.svg" alt></li><li data-star-group="2312" data-star="4" class="post-rating-image star-full-white"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot.svg" alt></li><li data-star-group="2312" data-star="5"  class="post-rating-image star-empty-white"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot.svg" alt></li>                                </ul>
+                            </li>
+							<li><a href="/category/web-design/" class="item-cat">vvvvvvvv</a></li>
+							<li><div class="item-date">ssssss</div></li>
+							<li><div class="item-time">9 min read</div></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		</div>
+
+<div class="container-fluid c1 s-collection case primary-block  scrollie-consumer" data-midnight="static">
+	<div class="container">
+		<div class="section-title t2 animate-title">Case Studies</div>
+		<div class="item-area f-c">
+								<div class="item-wrap">
+				<div class="item">
+					<a href="https://fireart.studio/cases/swipex/" class="item-img img-wrap">
+
+						<img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/02/Mask-Group.png" alt="#">
+						<div class="img-hider animation-fill-forwards scrollie-consumer"></div>
+					</a>
+					<div class="item-category-date">
+						Development, Product Design
+					</div>
+					<div class="item-title"><a href="https://fireart.studio/cases/swipex/">A Conceptual Dating App Design for Swipex</a></div>
+				</div>
+			</div>
+								<div class="item-wrap">
+				<div class="item">
+					<a href="https://fireart.studio/cases/ringo/" class="item-img img-wrap">
+
+						<img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/02/1-9.png" alt="#">
+						<div class="img-hider animation-fill-forwards scrollie-consumer"></div>
+					</a>
+					<div class="item-category-date">
+						Development, Product Design
+					</div>
+					<div class="item-title"><a href="https://fireart.studio/cases/ringo/">Rocco the Rhino - A Memorable Character Concept</a></div>
+				</div>
+			</div>
+					</div>
+	</div>
+</div>
+{% endblock content %}
+<script>
+	$(document).ready(function(){
+	console.log(facebook_loc);
+	$('.facebook-href').attr('href', facebook_loc);
+	$('.twitter-share-button').attr('href', twitter_loc);
+});
+</script>

@@ -1,0 +1,11 @@
+certifi
+chardet
+Django
+django-crispy-forms
+idna
+mysqlclient==1.4.1
+Pillow
+pytz
+requests
+sqlparse
+urllib3

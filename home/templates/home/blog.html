@@ -1,0 +1,179 @@
+{% extends "home/home_base.html" %}
+
+{% block post %}
+{% if user.is_authenticated %}
+	<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a href="{% url 'post' %}">post</a></li>
+	{% endif %}
+{% endblock post %}
+
+{% block content %}
+<div class="container-fluid s-placeholder type-blog">
+	<div class="placeholder-hider"></div>
+	<div class="container posrel">
+		<!-- gif -->
+		<div class="logo-gif logo-proddes-gif">
+			<img src="#" alt="">
+		</div>
+		<!-- - -->
+		<div class="row-first">
+			<div class="col">
+			<h1 class="section-title t1 animate-placeholder-title">This is our Blog</h1>
+				<div class="section-subtitle st2 animate-placeholder-subtitle">Collection of our stories, awesome tips, and design insights</div>
+				<div class="section-filters">
+					<ul>
+					<li class="active"><a href="/blog/">All</a></li>
+												<li><a href="/category/animation/">Animation</a></li>
+												<li><a href="/category/game-design/">Game Design</a></li>
+												<li><a href="/category/graphics-design/">Graphics Design</a></li>
+												<li><a href="/category/illustration/">Illustration</a></li>
+												<li><a href="/category/management/">Management</a></li>
+												<li><a href="/category/mobile-app-design/">Mobile App Design</a></li>
+												<li><a href="/category/product-design/">Product Design</a></li>
+												<li><a href="/category/web-design/">Web Design</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid s-blog c1" data-midnight="static">
+	<div class="container">
+		<div class="blog-area">
+			<div class="blog-content">
+				<div class="s-posts">
+					<div class="item-area">
+
+						{% for post in posts %}
+
+						  <div class="item-wrap">
+							<div class="item">
+								<div class="article-metadata">
+									<img class="rounded-circle article-img" src="#">
+								    <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+								</div>
+								<div class="item-title"><h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2></div>
+								<ul class="item-row">
+									<li><ul class="item-rating"><li data-star-group="4661" data-star="1"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4661" data-star="2"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4661" data-star="3"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4661" data-star="4"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4661" data-star="5"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li></ul></li>
+									<li><div class="item-date">{{ post.date_posted|date:"F d, Y" }}</div></li>
+									<li><div class="item-time">									7 min read</div></li>
+								</ul>
+								<div class="item-descr">{{ post.content1 }}</div>
+							</div>
+						  </div>
+
+
+						{% endfor %}
+
+					</div>
+				</div>
+
+
+
+
+				<div class="s-nav">
+					{% if is_paginated %}
+						{% if page_obj.has_previous %}
+							<a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+							<a class="btn btn-outline-info mb-4" href="?page={{page_obj.previous_page_number}}">Previous</a>
+						{% endif %}
+						{% for num in page_obj.paginator.page_range %}
+							{% if page_obj.number == num %}
+								<a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+							{% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+								<a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+							{% endif %}
+						{% endfor %}
+						{% if page_obj.has_next %}
+							<a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+							<a class="btn btn-outline-info mb-4" href="?page={{page_obj.paginator.num_pages }}">Last</a>
+						{% endif %}
+					{% endif %}
+
+
+				</div>
+			</div>
+
+			<div class="blog-sidebar">
+				<div class="s-posts-2">
+					<div class="item-area">
+														<div class="item-wrap">
+									<div class="item">
+										<a href="https://fireart.studio/how-ai-and-ml-are-starting-the-next-ux-design-revolution/" class="item-img img-wrap">
+											<img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/08/franck-v-jIBMSMs4_kA-unsplash.jpg" alt="#">
+										</a>
+										<div class="item-row-first">
+											<ul class="item-row-second">
+												<li><div class="item-date">29 August</div></li>
+												<li><div class="item-cat">Web Design</div></li>
+											</ul>
+											<div class="item-title"><a href="https://fireart.studio/how-ai-and-ml-are-starting-the-next-ux-design-revolution/">How AI and ML Are Starting the Next UX Design Revolution</a></div>
+											<ul class="item-row-third">
+												<li><div class="item-time">7 min read</div></li>
+                                                <li><ul class="item-rating"><li data-star-group="4661" data-star="1"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4661" data-star="2"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4661" data-star="3"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4661" data-star="4"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4661" data-star="5"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li></ul></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+														<div class="item-wrap">
+									<div class="item">
+										<a href="https://fireart.studio/case-study-how-to-create-the-flat-illustration-design-that-stands-out/" class="item-img img-wrap">
+											<img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/08/frr4.jpeg" alt="#">
+										</a>
+										<div class="item-row-first">
+											<ul class="item-row-second">
+												<li><div class="item-date">26 August</div></li>
+												<li><div class="item-cat">Illustration</div></li>
+											</ul>
+											<div class="item-title"><a href="https://fireart.studio/case-study-how-to-create-the-flat-illustration-design-that-stands-out/">CASE STUDY: How to Create The Flat Illustration Design That Stands Out?</a></div>
+											<ul class="item-row-third">
+												<li><div class="item-time">6 min read</div></li>
+                                                <li><ul class="item-rating"><li data-star-group="4652" data-star="1" class="post-rating-image star-full"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4652" data-star="2" class="post-rating-image star-full"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4652" data-star="3"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4652" data-star="4"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4652" data-star="5"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li></ul></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+														<div class="item-wrap">
+									<div class="item">
+										<a href="https://fireart.studio/designrush-recognizes-fireart-studio-as-the-best-graphic-design-team-in-poland-in-2019/" class="item-img img-wrap">
+											<img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/08/fr14.jpg" alt="#">
+										</a>
+										<div class="item-row-first">
+											<ul class="item-row-second">
+												<li><div class="item-date">25 August</div></li>
+												<li><div class="item-cat">Graphics Design</div></li>
+											</ul>
+											<div class="item-title"><a href="https://fireart.studio/designrush-recognizes-fireart-studio-as-the-best-graphic-design-team-in-poland-in-2019/">DesignRush Recognizes Fireart Studio As The Best Graphic Design Team In Poland In 2019</a></div>
+											<ul class="item-row-third">
+												<li><div class="item-time">3 min read</div></li>
+                                                <li><ul class="item-rating"><li data-star-group="4640" data-star="1" class="post-rating-image star-full"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4640" data-star="2" class="post-rating-image star-full"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4640" data-star="3" class="post-rating-image star-full"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4640" data-star="4" class="post-rating-image star-full"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4640" data-star="5"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li></ul></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+														<div class="item-wrap">
+									<div class="item">
+										<a href="https://fireart.studio/old-school-is-cool-top-4-retro-web-design-trends/" class="item-img img-wrap">
+											<img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/08/fr5.jpg" alt="#">
+										</a>
+										<div class="item-row-first">
+											<ul class="item-row-second">
+												<li><div class="item-date">25 August</div></li>
+												<li><div class="item-cat">Web Design</div></li>
+											</ul>
+											<div class="item-title"><a href="https://fireart.studio/old-school-is-cool-top-4-retro-web-design-trends/">Old School is Cool: Top 4 Retro Web Design Trends</a></div>
+											<ul class="item-row-third">
+												<li><div class="item-time">5 min read</div></li>
+                                                <li><ul class="item-rating"><li data-star-group="4632" data-star="1"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4632" data-star="2"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4632" data-star="3"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4632" data-star="4"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li><li data-star-group="4632" data-star="5"  class="post-rating-image star-empty"><img src="https://fireartstudio.s3-accelerate.amazonaws.com/uploads/2019/04/rate-dot-black.svg" alt></li></ul></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+											</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}
